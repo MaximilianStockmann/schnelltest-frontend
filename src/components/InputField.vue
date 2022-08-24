@@ -1,14 +1,17 @@
 <template>
-  <div>
-    <label for=""></label>
-    <input id="props.id" />
-  </div>
+	<label for="test">{{ props.formInput.label }}</label>
+	<input id="test" />
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  id: string;
-}>();
+	import {formInput} from "@/scripts/util/formInput";
+	const props = defineProps<{
+		formInput: formInput;
+	}>();
+
+	console.log(props.formInput);
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+	@import "@/styles/components/inputField.scss";
+</style>

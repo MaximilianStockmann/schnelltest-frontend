@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div id="content-area">
 		<FillableForm />
 	</div>
 </template>
