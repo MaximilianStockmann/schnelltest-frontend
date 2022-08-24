@@ -1,6 +1,31 @@
+@import '../global/font.scss';
+@import '../global/boxShadow.scss';
+@import '../global/highlighting.scss';
+
 .input-container {
   width: 90%;
   display: flex;
   flex-direction: column;
   margin: auto;
+}
+
+.input-label {
+  display: flex;
+  @include standard-text;
+}
+
+.input-label p {
+  display: flex;
+  margin: 0px;
+  color: red;
+}
+
+.input-box {
+  height: calc(10px + 2vh);
+  @include standard-box-shadow;
+}
+
+.input-box:focus {
+  @include highlighted-box-shadow;
+  @include standard-highlight
 }

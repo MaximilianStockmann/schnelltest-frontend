@@ -1,6 +1,8 @@
 <template>
-	<label for="test">{{ props.formInput.label }}</label>
-	<input id="test" />
+	<label class="input-label" for="test"
+		>{{ props.formInput.label }} <p v-if="props.formInput.isMandatory">*</p></label
+	>
+	<input class="input-box" id="test" />
 </template>
 
 <script setup lang="ts">
