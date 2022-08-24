@@ -3,9 +3,9 @@
   src: url("/src/assets/fonts/Mulish/static/Mulish-Medium.ttf") format("truetype");
 }
 
-@mixin standard-text {
+@mixin standard-text ($color : white) {
   font-family: "Mulish";
-  color: #FFF;
+  color: $color;
   font-size: calc(16px + 1vh);
 }
 

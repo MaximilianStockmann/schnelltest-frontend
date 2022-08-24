@@ -12,6 +12,7 @@
 .input-label {
   display: flex;
   @include standard-text;
+  mix-blend-mode: hard-light;
 }
 
 .input-label p {
@@ -21,11 +22,33 @@
 }
 
 .input-box {
-  height: calc(10px + 2vh);
+  @include standard-text(black);
+  //height: calc(12px + 2vh);
   @include standard-box-shadow;
 }
 
 .input-box:focus {
   @include highlighted-box-shadow;
   @include standard-highlight
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+select {
+  background-color: white;
+}
+
+option {
+  appearance: none;
+  background-color: rgb(84, 9, 155);
+  @include standard-text;
 }

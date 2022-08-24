@@ -1,6 +1,6 @@
 <template>
 	<div class="form-container">
-		<div class="input-container" v-for="(element, index) in formInputs">
+		<div class="input-container" :class="element.label" v-for="(element, index) in formInputs">
 			<InputField :form-input="element" />
 		</div>
 	</div>
@@ -12,19 +12,25 @@
 	import InputField from "./InputField.vue";
 
 	const formInputs: formInput[] = [
-		new formInput("Vorname", [acceptableTypes.STRING], true),
-		new formInput("Nachname", [acceptableTypes.STRING], true),
-		new formInput("Geschlecht", [acceptableTypes.PREDEFINED], true),
-		new formInput("Geburtstag", [acceptableTypes.DATE], true),
-		new formInput("E-Mail", [acceptableTypes.STRING], true),
-		new formInput("Telefon", [acceptableTypes.NUMBER], true),
-		new formInput("Passnummer", [acceptableTypes.STRING], false),
-		new formInput("Test-Typ", [acceptableTypes.PREDEFINED], true),
-		new formInput("Land", [acceptableTypes.PREDEFINED], true, {}),
-		new formInput("Straße", [acceptableTypes.STRING], true),
-		new formInput("Hausnummer", [acceptableTypes.NUMBER], true),
-		new formInput("PLZ", [acceptableTypes.NUMBER], true),
-		new formInput("Ort", [acceptableTypes.STRING], true),
+		new formInput("Vorname", acceptableTypes.STRING, true),
+		new formInput("Nachname", acceptableTypes.STRING, true),
+		new formInput("Geschlecht", acceptableTypes.PREDEFINED, true, {
+			selectableOptions: ["männlich", "weiblich", "divers"],
+		}),
+		new formInput("Geburtstag", acceptableTypes.DATE, true),
+		new formInput("E-Mail", acceptableTypes.STRING, true),
+		new formInput("Telefon", acceptableTypes.PHONE, true),
+		new formInput("Passnummer", acceptableTypes.STRING, false),
+		new formInput("Test-Typ", acceptableTypes.PREDEFINED, true, {
+			selectableOptions: ["Antigen Test", "PCR-Labor (79,75€)", "PCR-Labor (angeordnet, KV)"],
+		}),
+		new formInput("Land", acceptableTypes.PREDEFINED, true, {
+			selectableOptions: ["Deutschland", "Österreich"],
+		}),
+		new formInput("Straße", acceptableTypes.STRING, true),
+		new formInput("Hausnummer", acceptableTypes.NUMBER, true),
+		new formInput("PLZ", acceptableTypes.POSTCODE, true),
+		new formInput("Ort", acceptableTypes.STRING, true),
 	];
 </script>
 

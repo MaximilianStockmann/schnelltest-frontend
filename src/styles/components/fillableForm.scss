@@ -8,3 +8,24 @@
   margin: auto;
   row-gap: 1vh;
 }
+
+.Passnummer {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 95%;
+  margin: auto;
+}
+
+.Test-Typ {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 95%;
+  margin: auto;
+}
+
+.Land {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 95%;
+  margin: auto;
+}
