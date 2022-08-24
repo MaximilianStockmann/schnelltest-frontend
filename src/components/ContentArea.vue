@@ -1,5 +1,6 @@
 <template>
 	<div id="content-area">
+		<h1 class="title">Anmeldung zur Testung</h1>
 		<FillableForm />
 		<div class="header">
 			<!--Content before waves-->

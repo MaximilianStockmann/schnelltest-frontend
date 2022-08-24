@@ -1,3 +1,10 @@
+@import "../global/font.scss";
+
+.title {
+  @include header-text;
+  text-align: center;
+}
+
 .header {
   width: 100%;
   position:fixed;
