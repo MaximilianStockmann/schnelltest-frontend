@@ -44,7 +44,8 @@
 					key == 39 ||
 					key == 13 ||
 					key == 9 ||
-					key == 11
+					key == 11 ||
+					key == 43
 				)
 			) {
 				if (event.preventDefault) {

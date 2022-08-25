@@ -2,6 +2,10 @@
 	<div id="content-area">
 		<h1 class="title">Anmeldung zur Testung</h1>
 		<FillableForm />
+		<div class="consent-menu-container">
+			<AppConsentMenu class="corona-warn" containerLabel="Corona Warn App" />
+			<AppConsentMenu class="luca-app" container-label="Luca App" />
+		</div>
 		<div class="header">
 			<!--Content before waves-->
 			<div class="inner-header flex"></div>
@@ -35,6 +39,7 @@
 
 <script setup lang="ts">
 	import FillableForm from "./FillableForm.vue";
+	import AppConsentMenu from "./AppConsentMenu.vue";
 </script>
 
 <style lang="scss">

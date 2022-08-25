@@ -9,8 +9,23 @@
   font-size: calc(16px + 1vh);
 }
 
+@mixin small-text ($color : white) {
+  font-family: "Mulish";
+  color: $color;
+  font-size: calc(10px + 0.8vh);
+}
+
 @mixin header-text {
   font-family: "Mulish";
   color: #FFF;
   font-size: calc(24px + 2vh);
+}
+
+@function set-text-color($color) {
+  @if (lightness( $color ) > 50) {
+    @return $black; // Lighter color, return black
+  }
+  @else {
+    @return $white; // Darker color, return white
+  }
 }

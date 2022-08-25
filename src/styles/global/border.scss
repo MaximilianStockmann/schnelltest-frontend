@@ -1,0 +1,3 @@
+@mixin standard-border($type: outset, $color: rgb(151, 142, 142)) {
+  border: 1px $type $color;
+}

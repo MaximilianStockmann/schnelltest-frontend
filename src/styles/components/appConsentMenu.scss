@@ -1,0 +1,44 @@
+@import '../../styles/global/border.scss';
+@import '../../styles/global/font.scss';
+
+.app-consent-menu {
+  background-color: transparent;
+  margin: auto;
+  margin-top: 5%;
+  width: 90%;
+  @include standard-text(black);
+  @include standard-border();
+}
+
+.consent-title-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.app-consent-menu div button {
+  height: 60%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0.5vw;
+  font-family: inherit;
+}
+
+.consent-form {
+  display: flex;
+  flex-direction: column;
+  @include small-text(black);
+}
+
+.consent-form label {
+  margin: 1%;
+}
+
+.corona-warn {
+
+}
+
+.luca-app {
+
+}
