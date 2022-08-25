@@ -6,6 +6,7 @@
 			<AppConsentMenu class="corona-warn" containerLabel="Corona Warn App" />
 			<AppConsentMenu class="luca-app" container-label="Luca App" />
 		</div>
+		<button @click="downloadConfirmation()">Click Me!</button>
 		<div class="header">
 			<!--Content before waves-->
 			<div class="inner-header flex"></div>
@@ -40,6 +41,14 @@
 <script setup lang="ts">
 	import FillableForm from "./FillableForm.vue";
 	import AppConsentMenu from "./AppConsentMenu.vue";
+	import {jsPDF} from "jspdf";
+
+	function downloadConfirmation() {
+		const doc = new jsPDF();
+
+		doc.text("Hello world!", 10, 10);
+		doc.save("test.pdf");
+	}
 </script>
 
 <style lang="scss">

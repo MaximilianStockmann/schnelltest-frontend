@@ -14,6 +14,9 @@
   },
   "dependencies": {
     "@vue/runtime-dom": "^3.2.37",
+    "html2pdf.js": "^0.10.1",
+    "jspdf": "^2.5.1",
+    "pdf-creator-node": "^2.3.5",
     "pinia": "^2.0.17",
     "sass": "^1.54.5",
     "vue": "^3.2.37"

@@ -10,6 +10,7 @@
 	import {formInput} from "@/scripts/util/formInput";
 	import {acceptableTypes} from "@/scripts/util/formInput";
 	import InputField from "./InputField.vue";
+	import {countryList} from "../scripts/util/countryList";
 
 	const formInputs: formInput[] = [
 		new formInput("Vorname", acceptableTypes.STRING, true),
@@ -25,7 +26,7 @@
 			selectableOptions: ["Antigen Test", "PCR-Labor (79,75€)", "PCR-Labor (angeordnet, KV)"],
 		}),
 		new formInput("Land", acceptableTypes.PREDEFINED, true, {
-			selectableOptions: ["Deutschland", "Österreich"],
+			selectableOptions: countryList,
 		}),
 		new formInput("Straße", acceptableTypes.STRING, true),
 		new formInput("Hausnummer", acceptableTypes.NUMBER, true),
